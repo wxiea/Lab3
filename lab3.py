@@ -111,5 +111,5 @@ def main():
     Depth = int(input("Enter Desired Depth "))
     At_Depth(Tree.root,f ,Depth)
     
-    Similarity("twofour.txt", Tree)
+    Similarity("Similarity.txt", Tree)
 main()

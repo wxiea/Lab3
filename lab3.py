@@ -22,18 +22,7 @@ def height(RT):
     if left < right:
         return 1 + left
     return 1 + right
-"""
-#found depth k in the tree
-def Depth(RT, file, k):
-    if RT is None:
-        return
-    if k != 0:
-        file.write(RT.key + "\n")
-        return
-    else:
-        Depth(RT.left, file, k - 1)
-        Depth(RT.right, file, k - 1)
-"""
+
 #open the file, read two words
 #find the words inthe tree
 #if find, print the result    
@@ -91,10 +80,5 @@ def main():
     Tree = GetWords("glove.6B.50d.txt", Tree)
     print("There are " + str(numNodes(Tree.root)) + " nodes in the tree.")
     print("The tree is of height " + str(height(Tree.root)))
-    """
-    Thedepth = int(input("Number "))
-    with open("words_at_d.txt", "w", encoding='UTF8') as file:
-                Depth(Tree, Thedepth, file)
-    """
     Similarity("Similarity.txt", Tree)
 main()

@@ -75,7 +75,7 @@ def main():
     request = input("AVL or RedBlack ")
     if request == "AVL" :
         Tree = AVLTree()
-    else:
+    if request == "RedBlack" :
         Tree = RedBlackTree()
     Tree = GetWords("glove.6B.50d.txt", Tree)
     print("There are " + str(numNodes(Tree.root)) + " nodes in the tree.")
